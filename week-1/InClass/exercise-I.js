@@ -10,5 +10,5 @@ function borndate(age) {
 function introduce (personName, age) {
     return "hola me llamo " +personName + "y naci en " + borndate(age) }
 
-console.log (introduce ("Yhenifer",26))
+console.log (introduce ("Yhenifer",39))
 
