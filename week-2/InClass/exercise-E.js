@@ -18,3 +18,5 @@ false || true
 let greaterThan5 = num > 5
 !greaterThan5
 !(num === 10)
+
+console.log(greaterThan5);

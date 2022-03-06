@@ -1,12 +1,15 @@
-function userCheker (username, userType){
-    if (username.charAt(0)=== username.charAt (0).toUpperCase ) {
-        
+function userCheker (userName, userType){
+    const frisLetter = userName.charAt(0);
+    const userLength = userName.length;
+    const isValidLength = userLength >= 5 && userLength <= 10;
+    const isSuperuser = userType === "admin" || userType === "manager"
+    
+    if (isSuperuser || (frisLetter === userName.charAt(0).toUpperCase() && isValidLength)){
+        return "username Valid" ;
     }
-}
+    else {
+        return "Username invalid"
+    }
+    }
 
-
-//
-In pairs, write a function that checks a username is of an acceptable format for a user type. The function must:
-take two parameters: one for the username and one for the user type
-if the username starts with a capital letter and has length between 5 and 10 characters long, it must return "Username valid"; otherwise, it must return "Username invalid"
-if the user type is an admin or a manager, all usernames must return "Username valid"
+console.log (userCheker("yhenifer","manager"));
